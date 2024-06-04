@@ -12,7 +12,7 @@ class Solution:
                 raise ValueError("every interval must have exactly two elements")
             if interval[0] > interval[1]:
                 raise ValueError("second value in interval must be bigger than first value")
-            if interval[0] >= -5 * 104 or interval[1] >= -5 * 104 or interval[0] <= 5 * 104 or interval[1] <= 5 * 104:
+            if interval[0] > -5 * 104 or interval[1] > -5 * 104 or interval[0] < 5 * 104 or interval[1] < 5 * 104:
                 raise ValueError("values must be between -5 * 104 and -5 * 104")
         intervals.sort()
         res = 0
